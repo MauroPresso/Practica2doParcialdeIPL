@@ -35,8 +35,28 @@ acumuladorDeImportesTotales = 0
 acumuladorDeImportesApagarEfectivo = 0
 acumuladorDeImportesApagarTarjeta = 0
 
+# Inicializando las listas donde se guardaran los datos de cada docente.
+ListaIDs = []
+ListaDeNombres = []
+ListaDeApellidos = []
+ListaDeEdades = []
+ListaDeAreas = []
+ListaDeLocalidades = []
+ListaDeSeminarios = []
+ListaDeModalidades = []
+ListaDeLugaresDeCursado = []
+ListaDeImportePorEncuentro = []
+ListaDeCantidadDeEncuentros = []
+ListaDeImporteTotal = []
+ListaDeModoDePago = []
+ListaDeImporteAPagar = []
+
+cantidadDeDocentes = int(input("Ingrese la cantidad de docentes: "))
+while cantidadDeDocentes <= 0:
+    print("Dato erroneo. Ingrese nuevamente.")
+    cantidadDeDocentes = int(input("Ingrese la cantidad de docentes: "))
 # Inicio ciclo for.
-for i in range(3):
+for i in range(cantidadDeDocentes):
     id = i + 1
     
     nombre = input("Ingrese el nombre de la persona: ").capitalize()
