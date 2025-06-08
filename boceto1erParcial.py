@@ -216,7 +216,7 @@ for i in range(cantidadDeDocentes):
     archivoDeDatos.write("*\tModo de pago:\t" + ListaDeModoDePago[i] + "\n")
     archivoDeDatos.write("*\tImporte a pagar:\t" + str(ListaDeImporteAPagar[i]) + "\n")
     archivoDeDatos.close() # El archivo de DATOS se cerró de la apertura del mismo modo.
-
+os.system("cls")
 archivoDeDatos = open(pathArchivoDeDatos, "r") # El archivo de RESULTADOS se abrió en modo lectura.
 datos = archivoDeDatos.read()
 archivoDeDatos.close() # El archivo de RESULTADOS se cerró de la apertura del mismo modo lectura.
@@ -229,7 +229,7 @@ pathArchivoDeResultados = "D:/Facultad/IFES/Materias/1erCuatri1erAnio/IntroAlPen
 archivoDeResultados = open(pathArchivoDeResultados, "w") # El archivo de RESULTADOS se abrió en modo (sobre)escritura.
 archivoDeResultados.write("REPORTE FINAL:\n")
 archivoDeResultados.write("-"*20)
-archivoDeResultados.write("\nParticipantes por area de formación:" + "\n\n")
+archivoDeResultados.write("\nParticipantes por area de formacion:" + "\n\n")
 archivoDeResultados.write("*\tCantidad de personas que cursaron de administrativa:\t" + str(contadorAreaAdministrativa) + "\n")
 archivoDeResultados.write("*\tCantidad de personas que cursaron de Naturales:\t" + str(contadorAreaNaturales) + "\n")
 archivoDeResultados.write("*\tCantidad de personas que cursaron de Tecnologicas:\t" + str(contadorAreaTecnologicas) + "\n")
@@ -252,7 +252,7 @@ archivoDeResultados.write("*\tCantidad de personas que cursaron de NQN:\t" + str
 archivoDeResultados.write("*\tCantidad de personas que cursaron de Cipolletti:\t" + str(contadorCipolletti) + "\n")
 archivoDeResultados.write("*\tCantidad de personas que cursaron de Roca:\t" + str(contadorRoca) + "\n")
 archivoDeResultados.write("-"*20)
-archivoDeResultados.write("\nRecaudación:" + "\n")
+archivoDeResultados.write("\nRecaudacion:" + "\n")
 archivoDeResultados.write("*\tImportes totales:\t" + str(acumuladorDeImportesTotales) + "\tpesos\n")
 archivoDeResultados.write("\n*\tCantidad de personas que pagaron con efectivo:\t" + str(contadorEfectivo) + "\n")
 archivoDeResultados.write("*\tImportes pagados por efectivo:\t" + str(acumuladorDeImportesApagarEfectivo) + "\tpesos\n")
