@@ -198,16 +198,24 @@ pathArchivoDeDatos = "D:/Facultad/IFES/Materias/1erCuatri1erAnio/IntroAlPensamie
 archivoDeDatos = open(pathArchivoDeDatos, "w") # El archivo de RESULTADOS se abrió en modo (sobre)escritura.
 archivoDeDatos.write("DATOS DE LOS DOCENTES:\n")
 archivoDeDatos.write("-"*20)
+archivoDeDatos.close() # El archivo de DATOS se cerró de la apertura del mismo modo (sobre)escritura.
 for i in range(cantidadDeDocentes):
     archivoDeDatos = open(pathArchivoDeDatos, "a") # El archivo de DATOS se abrió para agregar al final.
     archivoDeDatos.write("\nDOCENTE\t" + str(i+1) + ":\n")
-    archivoDeDatos.write( "*\tNombre completo:\t" + ListaDeNombres[i] + "\t" + ListaDeApellidos[i] + "\n")
     archivoDeDatos.write("*\tID:\t" + str(ListaIDs[i]) + "\n")
+    archivoDeDatos.write( "*\tNombre completo:\t" + ListaDeNombres[i] + "\t" + ListaDeApellidos[i] + "\n")
+    archivoDeDatos.write("*\tEdad:\t" + str(ListaDeEdades[i]) + "\n")
+    archivoDeDatos.write("*\tArea de formacion:\t" + ListaDeAreas[i] + "\n")
+    archivoDeDatos.write("*\tLocalidad:\t" + ListaDeLocalidades[i] + "\n")
+    archivoDeDatos.write("*\tSeminario:\t" + ListaDeSeminarios[i] + "\n") 
     archivoDeDatos.write("*\tModalidad:\t" + ListaDeModalidades[i] + "\n")
+    archivoDeDatos.write("*\tLugar de cursado:\t" + ListaDeLugaresDeCursado[i] + "\n")
+    archivoDeDatos.write("*\tImporte por encuentro:\t" + str(ListaDeImportePorEncuentro[i]) + "\tpesos\n")
+    archivoDeDatos.write("*\tCantidad de encuentros:\t" + str(ListaDeCantidadDeEncuentros[i]) + "\n")
+    archivoDeDatos.write("*\tImporte total:\t" + str(ListaDeImporteTotal[i]) + "\n")
+    archivoDeDatos.write("*\tModo de pago:\t" + ListaDeModoDePago[i] + "\n")
+    archivoDeDatos.write("*\tImporte a pagar:\t" + str(ListaDeImporteAPagar[i]) + "\n")
     archivoDeDatos.close() # El archivo de DATOS se cerró de la apertura del mismo modo.
-
-
-
 
 archivoDeDatos = open(pathArchivoDeDatos, "r") # El archivo de RESULTADOS se abrió en modo lectura.
 datos = archivoDeDatos.read()
@@ -251,6 +259,7 @@ archivoDeResultados.write("*\tImportes pagados por efectivo:\t" + str(acumulador
 archivoDeResultados.write("\n*\tCantidad de personas que pagaron con tarjeta:\t" + str(contadorTarjeta) + "\n")
 archivoDeResultados.write("*\tImportes pagados por tarjeta:\t" + str(acumuladorDeImportesApagarTarjeta) + "\tpesos\n")
 archivoDeResultados.write("-"*20)
+archivoDeResultados.close() # Archivo de RESULTADOS cerrado en modo escritura.
 
 archivoDeResultados = open(pathArchivoDeResultados, "r") # El archivo de RESULTADOS se abrió en modo lectura.
 resultados = archivoDeResultados.read()
