@@ -58,7 +58,7 @@ while cantidadDeDocentes <= 0:
 # Inicio ciclo for.
 for i in range(cantidadDeDocentes):
     id = i + 1
-    
+    print(f"\nIngrese los datos del docente {i+1}:\n")
     nombre = input("Ingrese el nombre de la persona: ").capitalize()
     apellido = input("\nIngrese el apellido de la persona: ").upper()
 
@@ -198,8 +198,13 @@ pathArchivoDeDatos = "D:/Facultad/IFES/Materias/1erCuatri1erAnio/IntroAlPensamie
 archivoDeDatos = open(pathArchivoDeDatos, "w") # El archivo de RESULTADOS se abrió en modo (sobre)escritura.
 archivoDeDatos.write("DATOS DE LOS DOCENTES:\n")
 archivoDeDatos.write("-"*20)
-
-
+for i in range(cantidadDeDocentes):
+    archivoDeDatos = open(pathArchivoDeDatos, "a") # El archivo de DATOS se abrió para agregar al final.
+    archivoDeDatos.write("\nDOCENTE\t" + str(i+1) + ":\n")
+    archivoDeDatos.write( "*\tNombre completo:\t" + ListaDeNombres[i] + "\t" + ListaDeApellidos[i] + "\n")
+    archivoDeDatos.write("*\tID:\t" + str(ListaIDs[i]) + "\n")
+    archivoDeDatos.write("*\tModalidad:\t" + ListaDeModalidades[i] + "\n")
+    archivoDeDatos.close() # El archivo de DATOS se cerró de la apertura del mismo modo.
 
 
 
