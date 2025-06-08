@@ -176,28 +176,21 @@ for i in range(cantidadDeDocentes):
         acumuladorDeImportesApagarTarjeta = acumuladorDeImportesApagarTarjeta + importeApagar
         contadorTarjeta += 1
 
-    # Muestro los datos de la persona.
-    print("\n-----------------DATOS DE LA PERSONA-----------------")
-    print("ID:", id)
-    print("Nombre:", nombre)
-    print("Apellido:", apellido)
-    print("Edad:", edad)
-    print("Area de formacion:", areaDeFormacion)
-    print("Localidad:", localidad)
-    print("Seminario:", seminario)
-    print("Modalidad:", modalidad)
-    print("Lugar de cursado:", lugarDeCursado)
-    print(f"Importe por encuentro: {importePorEncuentro} pesos")
-    print("Cantidad de encuentros:", cantidadDeEncuentros)
-    print(f"Importe total: {importeTotal} pesos")
-    print("Modalidad de pago:", modalidadDePago)
-    if modalidadDePago == "Efectivo":
-        print("Importe a pagar: ", importeApagar, "pesos")
-    else: # modalidadDePago == "Tarjeta":
-        print("Importe a pagar: ", importeApagar, "pesos")
-    print("--------------------------------------------------------")
-    input("\nIngrese cualquier tecla para continuar:\t")
-    os.system("cls")
+    # Guardo los datos de la persona en listas.
+    ListaIDs.append(id)
+    ListaDeNombres.append(nombre)
+    ListaDeApellidos.append(apellido)
+    ListaDeEdades.append(edad)
+    ListaDeAreas.append(areaDeFormacion)
+    ListaDeLocalidades.append(localidad)
+    ListaDeSeminarios.append(seminario)
+    ListaDeModalidades.append(modalidad)
+    ListaDeLugaresDeCursado.append(lugarDeCursado)
+    ListaDeImportePorEncuentro.append(importePorEncuentro)
+    ListaDeCantidadDeEncuentros.append(cantidadDeEncuentros)
+    ListaDeImporteTotal.append(importeTotal)
+    ListaDeModoDePago.append(modalidadDePago)
+    ListaDeImporteAPagar.append(importeApagar)
 # Fin del ciclo for.
 
 # Como terminó el ciclo for, los resultados están listos para ser guardados en un archivo.
