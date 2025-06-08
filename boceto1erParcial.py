@@ -59,20 +59,20 @@ while cantidadDeDocentes <= 0:
 for i in range(cantidadDeDocentes):
     id = i + 1
     print(f"\nIngrese los datos del docente {i+1}:\n")
-    nombre = input("Ingrese el nombre de la persona: ").capitalize()
-    apellido = input("\nIngrese el apellido de la persona: ").upper()
+    nombre = input("Ingrese el nombre: ").capitalize()
+    apellido = input("\nIngrese el apellido: ").upper()
 
     # Ingreso de la edad de la persona y su respectiva validación.
-    edad = int(input("\nIngrese la edad de la persona (La edad debe estar entre 30 y 60 años): "))
+    edad = int(input("\nIngrese la edad (La edad debe estar entre 30 y 60 años): "))
     while edad < 30 or edad > 60:
         print("Dato erroneo, intente nuevamente")
-        edad = int(input("\nIngrese la edad de la persona (La edad debe estar entre 30 y 60 años): "))
+        edad = int(input("\nIngrese la edad (La edad debe estar entre 30 y 60 años): "))
     
     # Ingreso del codigo de area de formacion y su respectiva validación.
-    codigodeAreaDeFormacion = input("\nIngrese el area de formacion de la persona (ADM – NAT – TEC ): ").upper()
+    codigodeAreaDeFormacion = input("\nIngrese el area de formacion (ADM – NAT – TEC ): ").upper()
     while codigodeAreaDeFormacion != "ADM" and codigodeAreaDeFormacion != "NAT" and  codigodeAreaDeFormacion != "TEC":
         print("Dato erroneo, intente nuevamente")
-        codigodeAreaDeFormacion = input("\nIngrese el area de formacion de la persona (ADM – NAT – TEC ): ").upper()
+        codigodeAreaDeFormacion = input("\nIngrese el area de formacion (ADM – NAT – TEC ): ").upper()
     # Area de formacion ya validada, ahora se asigna el area de formacion correspondiente.
     if codigodeAreaDeFormacion == "ADM":
         areaDeFormacion = "ADMINISTRATIVAS"
@@ -85,10 +85,10 @@ for i in range(cantidadDeDocentes):
         contadorAreaTecnologicas += 1
 
     # Ingreso del codigo de localidad y su respectiva validación.
-    codigoDeLocalidad = input("\nIngrese el codigo de localidad de la persona\nC: Cipolletti\nN: Neuquén Capital\nR: General Roca\nP: Plottier\nIngrese aquí: ").upper()
+    codigoDeLocalidad = input("\nIngrese el codigo de localidad\nC: Cipolletti\nN: Neuquén Capital\nR: General Roca\nP: Plottier\nIngrese aquí: ").upper()
     while codigoDeLocalidad != "C" and codigoDeLocalidad != "N" and codigoDeLocalidad != "R" and codigoDeLocalidad != "P":
         print("Dato erroneo, intente nuevamente")
-        codigoDeLocalidad = input("\nIngrese el codigo de localidad de la persona\nC: Cipolletti\nN: Neuquén Capital\nR: General Roca\nP: Plottier\nIngrese aquí: ").upper()
+        codigoDeLocalidad = input("\nIngrese el codigo de localidad\nC: Cipolletti\nN: Neuquén Capital\nR: General Roca\nP: Plottier\nIngrese aquí: ").upper()
     # Codigo de localidad ya validado, ahora se asigna el localidad correspondiente.
     if codigoDeLocalidad == "C":
         localidad = "Cipolletti"
@@ -104,10 +104,10 @@ for i in range(cantidadDeDocentes):
         contadorPlottier += 1
 
     # Ingreso del codigo de seminario y su respectiva validación.
-    codigoDeSeminario = input("\nIngrese el codigo de seminario de la persona\nA: IA EN LAS ÁREAS NATURALES\nB: LIDERAZGO SIGLO XXI\nC: ADMINISTRACIÓN DE RRHH\nD: NUEVAS TECNOLOGÍAS DE SOFTWARE\nE: INFORMÁTICA EN LA NUBE\nIngrese aquí: ").upper()
+    codigoDeSeminario = input("\nIngrese el codigo de seminario\nA: IA EN LAS ÁREAS NATURALES\nB: LIDERAZGO SIGLO XXI\nC: ADMINISTRACIÓN DE RRHH\nD: NUEVAS TECNOLOGÍAS DE SOFTWARE\nE: INFORMÁTICA EN LA NUBE\nIngrese aquí: ").upper()
     while codigoDeSeminario != "A" and codigoDeSeminario != "B" and codigoDeSeminario != "C" and codigoDeSeminario != "D" and codigoDeSeminario != "E":
         print("Dato erroneo, intente nuevamente")
-        codigoDeSeminario = input("\nIngrese el codigo de seminario de la persona\nA: IA EN LAS ÁREAS NATURALES\nB: LIDERAZGO SIGLO XXI\nC: ADMINISTRACIÓN DE RRHH\nD: NUEVAS TECNOLOGÍAS DE SOFTWARE\nE: INFORMÁTICA EN LA NUBE\nIngrese aquí: ").upper()
+        codigoDeSeminario = input("\nIngrese el codigo de seminario\nA: IA EN LAS ÁREAS NATURALES\nB: LIDERAZGO SIGLO XXI\nC: ADMINISTRACIÓN DE RRHH\nD: NUEVAS TECNOLOGÍAS DE SOFTWARE\nE: INFORMÁTICA EN LA NUBE\nIngrese aquí: ").upper()
     # Codigo de seminario ya validado, ahora se asigna el seminario correspondiente.
     if codigoDeSeminario == "A":
         seminario = "IA EN LAS AREAS NATURALES"
@@ -131,10 +131,10 @@ for i in range(cantidadDeDocentes):
         contadorSeminarioInfoEnLaNube += 1
 
     # Ingreso del tipo de modalidad y su respectiva validación.
-    tipoDeModalidad = input("\nIngrese el tipo de modalidad de la persona\nM: Mixta\nV: Virtual\nP: Presencial\nIngrese aquí: ").upper()
+    tipoDeModalidad = input("\nIngrese el tipo de modalidad\nM: Mixta\nV: Virtual\nP: Presencial\nIngrese aquí: ").upper()
     while tipoDeModalidad != "M" and tipoDeModalidad != "V" and tipoDeModalidad != "P":
         print("Dato erroneo, intente nuevamente") 
-        tipoDeModalidad = input("\nIngrese el tipo de modalidad de la persona\nM: Mixta\nV: Virtual\nP: Presencial\nIngrese aquí: ").upper()
+        tipoDeModalidad = input("\nIngrese el tipo de modalidad\nM: Mixta\nV: Virtual\nP: Presencial\nIngrese aquí: ").upper()
     # Tipo de modalidad ya validado, ahora se asigna la modalidad correspondiente.
     if tipoDeModalidad == "M":
         modalidad = "MIXTA"
@@ -150,20 +150,20 @@ for i in range(cantidadDeDocentes):
         contadorModalidadPresencial += 1
 
     # Ingreso de la cantidad de encuentros y su respectiva validación.
-    cantidadDeEncuentros = int(input("\nIngrese la cantidad de encuentros de la persona (de 1 a 5): "))
+    cantidadDeEncuentros = int(input("\nIngrese la cantidad de encuentros (de 1 a 5): "))
     while cantidadDeEncuentros < 1 or cantidadDeEncuentros > 5:
         print("Dato erroneo, intente nuevamente")
-        cantidadDeEncuentros = int(input("\nIngrese la cantidad de encuentros de la persona (de 1 a 5): "))
+        cantidadDeEncuentros = int(input("\nIngrese la cantidad de encuentros (de 1 a 5): "))
     
     # Calculo el importe total de la persona.
     importeTotal = cantidadDeEncuentros * importePorEncuentro
     acumuladorDeImportesTotales = acumuladorDeImportesTotales + importeTotal
     
     # Ingreso del tipo de pago y su respectiva validación.
-    tipoDePago = input("\nIngrese el tipo de pago de la persona\nE: Efectivo\nT: Tarjeta\nIngrese aquí: ").upper()
+    tipoDePago = input("\nIngrese el tipo de pago\nE: Efectivo\nT: Tarjeta\nIngrese aquí: ").upper()
     while tipoDePago != "E" and tipoDePago != "T":
         print("Dato erroneo, intente nuevamente")
-        tipoDePago = input("\nIngrese el tipo de pago de la persona\nE: Efectivo\nT: Tarjeta\nIngrese aquí: ").upper()
+        tipoDePago = input("\nIngrese el tipo de pago\nE: Efectivo\nT: Tarjeta\nIngrese aquí: ").upper()
     # Tipo de pago ya validado, ahora se asigna el pago correspondiente.
     if tipoDePago == "E":
         modalidadDePago = "Efectivo"
