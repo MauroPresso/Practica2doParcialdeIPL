@@ -132,14 +132,18 @@ for i in range(cantidadDeEmpleados):
 os.system("cls") # Limpiar pantalla
 # Como terminó el ciclo for, los resultados están listos para ser guardados en un archivo.
 pathArchivoDeDatos = "D:/Facultad/IFES/Materias/1erCuatri1erAnio/IntroAlPensamientoLogico/Practica2doParcial/DatosDelProgramaNuevoBoceto1erParcial.txt"
-archivoDeDatos = open(pathArchivoDeDatos, "w") # El archivo de RESULTADOS se abrió en modo (sobre)escritura.
+archivoDeDatos = open(pathArchivoDeDatos, "w") # El archivo de DATOS se abrió en modo (sobre)escritura.
 archivoDeDatos.write("DATOS DE LOS EMPLEADOS:\n")
 archivoDeDatos.write("-"*20)
+archivoDeDatos.close()
+for i in range(cantidadDeEmpleados):
+    archivoDeDatos = open(pathArchivoDeDatos, "a")
 
+    archivoDeDatos.close()
 
-archivoDeDatos = open(pathArchivoDeDatos, "r") # El archivo de RESULTADOS se abrió en modo lectura.
+archivoDeDatos = open(pathArchivoDeDatos, "r") # El archivo de DATOS se abrió en modo lectura.
 datos = archivoDeDatos.read()
-archivoDeDatos.close() # El archivo de RESULTADOS se cerró de la apertura del mismo modo lectura.
+archivoDeDatos.close() # El archivo de DATOS se cerró de la apertura del mismo modo lectura.
 print(datos)
 input("\nPresione ENTER para continuar...")
 os.system("cls")
@@ -164,7 +168,7 @@ print(f"Acumulador de sueldos por años de antigüedad: {acumuladorSueldosPorAni
 print("\n")
 print(f"Promedio de edades: {acumuladorEdades/cantidadDeEdades} años")
 print(f"Promedio de sueldos: {acumuladorSueldos/cantidadDeEdades} pesos")
-print("-----------------------------------------------------")
+archivoDeResultados.close()
 
 archivoDeResultados = open(pathArchivoDeResultados, "r") # El archivo de RESULTADOS se abrió en modo lectura.
 resultados = archivoDeResultados.read()
