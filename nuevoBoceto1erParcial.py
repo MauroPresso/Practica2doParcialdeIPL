@@ -117,6 +117,27 @@ for i in range(3):
     os.system("cls") # Limpiar pantalla   
 # Fin del ciclo for.
 
+# Como terminó el ciclo for, los resultados están listos para ser guardados en un archivo.
+pathArchivoDeDatos = "D:/Facultad/IFES/Materias/1erCuatri1erAnio/IntroAlPensamientoLogico/Practica2doParcial/DatosDelProgramaNuevoBoceto1erParcial.txt"
+archivoDeDatos = open(pathArchivoDeDatos, "w") # El archivo de RESULTADOS se abrió en modo (sobre)escritura.
+archivoDeDatos.write("DATOS DE LOS EMPLEADOS:\n")
+archivoDeDatos.write("-"*20)
+
+
+archivoDeDatos = open(pathArchivoDeDatos, "r") # El archivo de RESULTADOS se abrió en modo lectura.
+datos = archivoDeDatos.read()
+archivoDeDatos.close() # El archivo de RESULTADOS se cerró de la apertura del mismo modo lectura.
+print(datos)
+input("\nPresione ENTER para continuar...")
+os.system("cls")
+
+
+# Como terminó el ciclo for, los resultados están listos para ser guardados en un archivo.
+pathArchivoDeResultados = "D:/Facultad/IFES/Materias/1erCuatri1erAnio/IntroAlPensamientoLogico/Practica2doParcial/ResultadosDelProgramaNuevoBoceto1erParcial.txt"
+archivoDeResultados = open(pathArchivoDeResultados, "w") # El archivo de RESULTADOS se abrió en modo (sobre)escritura.
+archivoDeResultados.write("REPORTE FINAL:\n")
+archivoDeResultados.write("-"*20)
+
 print("\n\n\n----------------RESULTADOS---------------------")
 print("\nCantidad de personas por capacitación:")
 print("OFFICE:", contadorOFFICE)
@@ -131,6 +152,11 @@ print("\n")
 print(f"Promedio de edades: {acumuladorEdades/cantidadDeEdades} años")
 print(f"Promedio de sueldos: {acumuladorSueldos/cantidadDeEdades} pesos")
 print("-----------------------------------------------------")
-input("\nPresione ENTER para continuar...") 
-print("\nFin del programa.")
-    
+
+archivoDeResultados = open(pathArchivoDeResultados, "r") # El archivo de RESULTADOS se abrió en modo lectura.
+resultados = archivoDeResultados.read()
+archivoDeResultados.close() # El archivo de RESULTADOS se cerró de la apertura del mismo modo lectura.
+print(resultados)
+input("\nIngrese ENTER para continuar...")
+os.system("cls")
+print("\nFin del programa =D")
