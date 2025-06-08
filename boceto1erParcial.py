@@ -61,7 +61,7 @@ for i in range(3):
         areaDeFormacion = "NATURALES Y RENOVABLES"
         contadorAreaNaturales += 1
     else: # codigodeAreaDeFormacion == "TEC":
-        areaDeFormacion = "TECNOLÓGICAS"
+        areaDeFormacion = "TECNOLOGICAS"
         contadorAreaTecnologicas += 1
 
     # Ingreso del codigo de localidad y su respectiva validación.
@@ -74,7 +74,7 @@ for i in range(3):
         localidad = "Cipolletti"
         contadorCipolletti += 1
     elif codigoDeLocalidad == "N":
-        localidad = "Neuquén Capital"
+        localidad = "Neuquen Capital"
         contadorNQN += 1
     elif codigoDeLocalidad == "R":
         localidad = "General Roca"
@@ -90,7 +90,7 @@ for i in range(3):
         codigoDeSeminario = input("\nIngrese el codigo de seminario de la persona\nA: IA EN LAS ÁREAS NATURALES\nB: LIDERAZGO SIGLO XXI\nC: ADMINISTRACIÓN DE RRHH\nD: NUEVAS TECNOLOGÍAS DE SOFTWARE\nE: INFORMÁTICA EN LA NUBE\nIngrese aquí: ").upper()
     # Codigo de seminario ya validado, ahora se asigna el seminario correspondiente.
     if codigoDeSeminario == "A":
-        seminario = "IA EN LAS ÁREAS NATURALES"
+        seminario = "IA EN LAS AREAS NATURALES"
         importePorEncuentro = 12500
         contadorSeminarioIAenNaturales += 1
     elif codigoDeSeminario == "B":
@@ -98,15 +98,15 @@ for i in range(3):
         importePorEncuentro = 8900
         contadorSeminarioLiderazgo += 1
     elif codigoDeSeminario == "C":
-        seminario = "ADMINISTRACIÓN DE RRHH"
+        seminario = "ADMINISTRACION DE RRHH"
         importePorEncuentro = 10500
         contadorSeminarioRRHH += 1
     elif codigoDeSeminario == "D":
-        seminario = "NUEVAS TECNOLOGÍAS DE SOFTWARE"
+        seminario = "NUEVAS TECNOLOGIAS DE SOFTWARE"
         importePorEncuentro = 11000
         contadorSeminarioNuevasTECSoftware += 1
     else: # codigoDeSeminario == "E"
-        seminario = "INFORMÁTICA EN LA NUBE"
+        seminario = "INFORMATICA EN LA NUBE"
         importePorEncuentro = 14900
         contadorSeminarioInfoEnLaNube += 1
 
@@ -203,7 +203,7 @@ pathArchivoDeResultados = "D:/Facultad/IFES/Materias/1erCuatri1erAnio/IntroAlPen
 archivoDeResultados = open(pathArchivoDeResultados, "w") # El archivo de RESULTADOS se abrió en modo (sobre)escritura.
 archivoDeResultados.write("REPORTE FINAL:\n")
 archivoDeResultados.write("-"*20)
-archivoDeResultados.write("\nParticipantes por área de formación:" + "\n\n")
+archivoDeResultados.write("\nParticipantes por area de formación:" + "\n\n")
 archivoDeResultados.write("*\tCantidad de personas que cursaron de administrativa:\t" + str(contadorAreaAdministrativa) + "\n")
 archivoDeResultados.write("*\tCantidad de personas que cursaron de Naturales:\t" + str(contadorAreaNaturales) + "\n")
 archivoDeResultados.write("*\tCantidad de personas que cursaron de Tecnologicas:\t" + str(contadorAreaTecnologicas) + "\n")
