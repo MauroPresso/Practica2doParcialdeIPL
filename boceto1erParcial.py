@@ -227,11 +227,11 @@ archivoDeResultados.write("*\tCantidad de personas que cursaron de Cipolletti:\t
 archivoDeResultados.write("*\tCantidad de personas que cursaron de Roca:\t" + str(contadorRoca) + "\n")
 archivoDeResultados.write("-"*20)
 archivoDeResultados.write("\nRecaudación:" + "\n")
-print("*\tImportes totales:\t" + str(acumuladorDeImportesTotales) + "\tpesos\n")
-print("\n*\tCantidad de personas que pagaron con efectivo:\t" + str(contadorEfectivo) + "\n")
-print("*\tImportes pagados por efectivo:\t" + str(acumuladorDeImportesApagarEfectivo) + "\tpesos\n")
-print("\n*\tCantidad de personas que pagaron con tarjeta:\t" + str(contadorTarjeta) + "\n")
-print("*\tImportes pagados por tarjeta:\t" + str(acumuladorDeImportesApagarTarjeta) + "\tpesos\n")
+archivoDeResultados.write("*\tImportes totales:\t" + str(acumuladorDeImportesTotales) + "\tpesos\n")
+archivoDeResultados.write("\n*\tCantidad de personas que pagaron con efectivo:\t" + str(contadorEfectivo) + "\n")
+archivoDeResultados.write("*\tImportes pagados por efectivo:\t" + str(acumuladorDeImportesApagarEfectivo) + "\tpesos\n")
+archivoDeResultados.write("\n*\tCantidad de personas que pagaron con tarjeta:\t" + str(contadorTarjeta) + "\n")
+archivoDeResultados.write("*\tImportes pagados por tarjeta:\t" + str(acumuladorDeImportesApagarTarjeta) + "\tpesos\n")
 archivoDeResultados.write("-"*20)
 
 archivoDeResultados = open(pathArchivoDeResultados, "r") # El archivo de RESULTADOS se abrió en modo lectura.
