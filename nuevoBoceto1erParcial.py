@@ -24,23 +24,40 @@ contadorBImodal = 0
 # ii) Acumular el sueldo por anios de antiguedad.
 acumuladorSueldosPorAnios = 0
 
+# Inicializando las listas donde se guardaran los datos de cada docente.
+ListaIDs = []
+ListaDeNombres = []
+ListaDeApellidos = []
+ListaDeEdades = []
+ListaDeAntiguedades = []
+ListaDeZonas = []
+ListaDeSexos = []
+ListaDeSectores = []
+ListaDeCapacitacion = []
+ListaDeModalidad = []
+ListaDeSueldos = []
 
-for i in range(3):
+cantidadDeEmpleados = int(input("Ingrese la cantidad de empleados: "))
+while cantidadDeEmpleados <= 0:
+    print("Dato erroneo. Ingrese nuevamente.")
+    cantidadDeEmpleados = int(input("\nIngrese la cantidad de empleados: "))
+print("\nIngrese los datos de los empleados:")
+for i in range(cantidadDeEmpleados):
     
     id = i+1
-    
-    nombre = input("Ingrese el nombre de la persona: ").capitalize()
-    apellido = input("Ingrese el apellido de la persona: ").upper()
+    print(f"\n{i+1}:\n")
+    nombre = input("Ingrese el nombre del empleado: ").capitalize()
+    apellido = input("Ingrese el apellido del empleado: ").upper()
 
-    sexo = input("Ingrese el sexo de la persona:\nM para masculino\nF para femenino\nIngrese aquí: ").upper()
+    sexo = input("Ingrese el sexo del empleado:\nM para masculino\nF para femenino\nIngrese aquí: ").upper()
     while sexo != "M" and sexo != "F":
         print("ERROR: Ingrese un sexo válido")
-        sexo = input("Ingrese el sexo de la persona:\nM para masculino\nF para femenino\nIngrese aquí: ").upper()
+        sexo = input("Ingrese el sexo del empleado:\nM para masculino\nF para femenino\nIngrese aquí: ").upper()
     
-    codigoDeSector = input("Ingrese el código de sector de la persona (A/B/C): ").upper()
+    codigoDeSector = input("Ingrese el código de sector del empleado (A/B/C): ").upper()
     while codigoDeSector!="A" and codigoDeSector!="B" and codigoDeSector!="C":
         print("ERROR: Ingrese un código de sector válido")
-        codigoDeSector = input("Ingrese el código de sector de la persona (A/B/C): ").upper()
+        codigoDeSector = input("Ingrese el código de sector del empleado (A/B/C): ").upper()
     
     if codigoDeSector=="A":
         sector = "FINANZAS"
@@ -55,10 +72,10 @@ for i in range(3):
     # Acumular sueldos
     acumuladorSueldos = acumuladorSueldos + sueldo
 
-    aniosDeAntiguedad = int(input("Ingrese la antiguedad de la persona (entre 0 a 20 años): "))
-    while aniosDeAntiguedad < 0 or  aniosDeAntiguedad > 20:
+    aniosDeAntiguedad = int(input("Ingrese la antiguedad del empleado (entre 0 a 20 años): "))
+    while aniosDeAntiguedad < 0 or aniosDeAntiguedad > 20:
         print("ERROR: Ingrese una antiguedad válida")
-        aniosDeAntiguedad = int(input("Ingrese la antiguedad de la persona (entre 0 a 20 años): "))
+        aniosDeAntiguedad = int(input("Ingrese la antiguedad del empleado (entre 0 a 20 años): "))
 
     # Acumular sueldo por años de antiguedad
     acumuladorSueldosPorAnios = acumuladorSueldosPorAnios + sueldo * aniosDeAntiguedad
@@ -76,20 +93,20 @@ for i in range(3):
         capacitacion = "CLIMA ORGANIZACIONAL"
         contadorCLIMAorganizacional += 1
 
-    edad = int(input("Ingrese la edad de la persona (entre 21 y 70 años): "))
+    edad = int(input("Ingrese la edad del empleado (entre 21 y 70 años): "))
     while edad < 21 or edad > 70:
         print("ERROR: Ingrese una edad válida")
-        edad = int(input("Ingrese la edad de la persona (entre 21 y 70 años): "))
+        edad = int(input("Ingrese la edad del empleado (entre 21 y 70 años): "))
     
     # Acumular edades
     acumuladorEdades = acumuladorEdades + edad
     # Contar cantidad de edades
     cantidadDeEdades += 1
 
-    zona = input("Ingrese la zona de la persona:\nN para Norte\nS para Sur\nO para Oeste\nE para Este\nIngrese aquí: ").upper()
+    zona = input("Ingrese la zona del empleado:\nN para Norte\nS para Sur\nO para Oeste\nE para Este\nIngrese aquí: ").upper()
     while zona != "N" and zona != "S" and zona != "O" and zona != "E":
         print("ERROR: Ingrese una zona válida")
-        zona = input("Ingrese la zona de la persona:\nN para Norte\nS para Sur\nO para Oeste\nE para Este\nIngrese aquí: ").upper()
+        zona = input("Ingrese la zona del empleado:\nN para Norte\nS para Sur\nO para Oeste\nE para Este\nIngrese aquí: ").upper()
 
     if zona=="N" or zona=="E":
         modalidad = "VIRTUAL"
@@ -99,8 +116,8 @@ for i in range(3):
         modalidad = "BIMODAL"
         contadorBImodal += 1
 
-    # Muestro los datos de la persona.
-    print("\n-----------------DATOS DE LA PERSONA-----------------")
+    # Guardo los datos del empleado en listas.
+    print("\n-----------------DATOS del empleado-----------------")
     print("ID:", id)
     print("Nombre:", nombre)
     print("Apellido:", apellido)
@@ -112,11 +129,8 @@ for i in range(3):
     print(f"Sueldo: {sueldo} pesos")
     print("Capacitación:", capacitacion)
     print("Modalidad:", modalidad)
-    print("-------------------------------------------------------\n")
-    input("\nPresione ENTER para continuar...")
-    os.system("cls") # Limpiar pantalla   
 # Fin del ciclo for.
-
+os.system("cls") # Limpiar pantalla
 # Como terminó el ciclo for, los resultados están listos para ser guardados en un archivo.
 pathArchivoDeDatos = "D:/Facultad/IFES/Materias/1erCuatri1erAnio/IntroAlPensamientoLogico/Practica2doParcial/DatosDelProgramaNuevoBoceto1erParcial.txt"
 archivoDeDatos = open(pathArchivoDeDatos, "w") # El archivo de RESULTADOS se abrió en modo (sobre)escritura.
