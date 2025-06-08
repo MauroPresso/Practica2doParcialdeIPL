@@ -117,18 +117,17 @@ for i in range(cantidadDeEmpleados):
         contadorBImodal += 1
 
     # Guardo los datos del empleado en listas.
-    print("\n-----------------DATOS del empleado-----------------")
-    print("ID:", id)
-    print("Nombre:", nombre)
-    print("Apellido:", apellido)
-    print("Sexo:", sexo)
-    print("Zona:", zona)
-    print("Sector:", sector)
-    print(f"Edad: {edad} años")
-    print(f"Antiguedad: {aniosDeAntiguedad} años")
-    print(f"Sueldo: {sueldo} pesos")
-    print("Capacitación:", capacitacion)
-    print("Modalidad:", modalidad)
+    ListaIDs.append(id)
+    ListaDeNombres.append(nombre)
+    ListaDeApellidos.append(apellido)
+    ListaDeSexos.append(sexo)
+    ListaDeZonas.append(zona)
+    ListaDeSectores.append(sector)
+    ListaDeEdades.append(edad)
+    ListaDeAntiguedades.append(aniosDeAntiguedad)
+    ListaDeSueldos.append(sueldo)
+    ListaDeCapacitacion.append(capacitacion)
+    ListaDeModalidad.append(modalidad)
 # Fin del ciclo for.
 os.system("cls") # Limpiar pantalla
 # Como terminó el ciclo for, los resultados están listos para ser guardados en un archivo.
