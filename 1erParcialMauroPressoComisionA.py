@@ -155,7 +155,7 @@ for i in range(cantidadDeEmpleados):
     archivoDeDatos.write("*\tPlus:\t" + str(ListaDePlus[i]) + "\tpesos\n") 
     archivoDeDatos.write("-"*20)
     archivoDeDatos.close() # El archivo de DATOS se cerró de la apertura del mismo modo.
-
+os.system("cls")
 archivoDeDatos = open(pathArchivoDeDatos, "r") # El archivo de RESULTADOS se abrió en modo lectura.
 datos = archivoDeDatos.read()
 archivoDeDatos.close() # El archivo de RESULTADOS se cerró de la apertura del mismo modo lectura.
