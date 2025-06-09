@@ -138,7 +138,18 @@ archivoDeDatos.write("-"*20)
 archivoDeDatos.close()
 for i in range(cantidadDeEmpleados):
     archivoDeDatos = open(pathArchivoDeDatos, "a")
-
+    archivoDeDatos.write("\nEMPLEADO\t" + str(i+1) + ":\n\n")
+    archivoDeDatos.write("*\tID:\t" + str(ListaIDs[i]) + "\n")
+    archivoDeDatos.write("*\tNombre completo:\t" + ListaDeNombres[i] + "\t" + ListaDeApellidos[i] + "\n")
+    archivoDeDatos.write("*\tSexo:\t" + ListaDeSexos[i] + "\n")
+    archivoDeDatos.write("*\tZona:\t" + ListaDeZonas[i] + "\n")
+    archivoDeDatos.write("*\tSector:\t" + ListaDeSectores[i] + "\n")
+    archivoDeDatos.write("*\tEdad:\t" + str(ListaDeEdades[i]) + "\tanos\n")
+    archivoDeDatos.write("*\tAntiguedad:\t" + str(ListaDeAntiguedades[i]) + "\tanos\n")
+    archivoDeDatos.write("*\tSueldo:\t" + str(ListaDeSueldos[i]) + "\tpesos\n")
+    archivoDeDatos.write("*\tCapacitacion:\t" + ListaDeCapacitacion[i] + "\n")
+    archivoDeDatos.write("*\tModalidad:\t" + ListaDeModalidad[i] + "\n")
+    archivoDeDatos.write("-"*20)
     archivoDeDatos.close()
 
 archivoDeDatos = open(pathArchivoDeDatos, "r") # El archivo de DATOS se abrió en modo lectura.
