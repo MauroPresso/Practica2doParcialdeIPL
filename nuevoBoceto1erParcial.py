@@ -138,7 +138,7 @@ archivoDeDatos.write("-"*20)
 archivoDeDatos.close()
 for i in range(cantidadDeEmpleados):
     archivoDeDatos = open(pathArchivoDeDatos, "a")
-    archivoDeDatos.write("\nEMPLEADO\t" + str(i+1) + ":\n\n")
+    archivoDeDatos.write("\nEMPLEADO\t" + str(i+1) + "\t:\n\n")
     archivoDeDatos.write("*\tID:\t" + str(ListaIDs[i]) + "\n")
     archivoDeDatos.write("*\tNombre completo:\t" + ListaDeNombres[i] + "\t" + ListaDeApellidos[i] + "\n")
     archivoDeDatos.write("*\tSexo:\t" + ListaDeSexos[i] + "\n")
